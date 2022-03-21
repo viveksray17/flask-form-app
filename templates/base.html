@@ -3,7 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>Calc App</title>
+    {% if operation_type %}
+      <!-- Upper Case the first Letter Format -->
+      <title>Calc App - {{ operation_type[0]|upper }}{{ operation_type[1:] }}</title>
+    {% else %}
+      <title>Calc App</title>
+    {% endif %}
   </head>
   <body bgcolor="cyan">
     {% block content %}{% endblock content %}

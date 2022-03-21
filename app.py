@@ -11,7 +11,7 @@ def home():
 
 @app.route("/<string:operation>")
 def operate(operation):
-    return render_template(f"{operation}.html")
+    return render_template(f"{operation}.html", operation_type=operation)
 
 
 @app.route("/result/<string:operation>", methods=["GET", "POST"])

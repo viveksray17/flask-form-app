@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, url_for
+from werkzeug.utils import redirect
 
 app = Flask(__name__)
 
@@ -28,6 +29,8 @@ def getresult(operation):
         else:
             result = round(num1 / num2, 2)
         return render_template("result.html", result=result)
+    else:
+        return redirect(url_for("home"))
 
 
 if __name__ == "__main__":

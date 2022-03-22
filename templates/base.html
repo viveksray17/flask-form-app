@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
     {% if operation_type %}
       <title>Calc App - {{ operation_type[0]|upper }}{{ operation_type[1:] }}</title>
     {% else %}
